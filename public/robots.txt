@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Esta es una invitación privada de boda
+# No indexar en motores de búsqueda
