@@ -2,8 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { getGuestByCode, getDefaultGuestName } from '@/data/guests'
-import { getTexts } from '@/data/dogTexts'
+
 
 export function HeroSection() {
   // Configuración de sensibilidad del tilt
@@ -18,13 +17,6 @@ export function HeroSection() {
   const cardRef = useRef<HTMLDivElement>(null)
   const searchParams = useSearchParams()
 
-  // Obtener información del invitado basada en el código
-  const code = typeof searchParams.get('codigo') === 'string' ? searchParams.get('codigo') : undefined
-  const guestInfo = code ? getGuestByCode(code) : null
-  const guestName = guestInfo?.name || getDefaultGuestName()
-  
-  // Obtener textos especiales para perros
-  const dogTexts = getTexts(guestInfo?.dog || false)
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped)
@@ -158,7 +150,7 @@ export function HeroSection() {
       <div className="perspective-1000">
         <div
           ref={cardRef}
-          className={`wedding-card ${isFlipped ? 'flipped' : ''}`}
+          className={`birthday-card ${isFlipped ? 'flipped' : ''}`}
           style={{
             touchAction: isInteracting ? 'none' as const : 'manipulation' as const,
             transform: isFlipped 
@@ -180,20 +172,18 @@ export function HeroSection() {
           <div className="card-front">
             <div className="card-border">
               <div className="card-header" style={{paddingTop: '10px', paddingBottom: '5px', marginBottom: '5px'}}>
-                <div className="wedding-ornament" style={getFrontParallaxStyle(1.2)}></div>
+                <div className="birthday-ornament" style={getFrontParallaxStyle(1.2)}></div>
                 <p className="main-message" style={getFrontParallaxStyle(0.7)}>
-                  ¡{guestName}!<br />
-                  {dogTexts ? 
-                    dogTexts.invitationMessage : 
-                    `${guestInfo?.plural ? 'están' : 'estás'} cordialmente invitad${guestInfo?.plural ? (guestInfo?.female ? 'as' : 'os') : (guestInfo?.female ? 'a' : 'o')} a la boda de`
-                  }
+                 
+                   Estás cordialmente invitado al cumpleaños de 
+                  
                 </p>
               </div>
               
               <div className="card-content">
                 <div className="guest-name-container" style={{marginTop: '0px', marginBottom: '30px'}}>
                   <div className="floral-divider" style={getFrontParallaxStyle(1.5)}></div>
-                  <h1 className="guest-name" style={getFrontParallaxStyle(0.8)}>Denis y Cesar</h1>
+                  <h1 className="guest-name" style={getFrontParallaxStyle(0.8)}>Javier Escobar</h1>
                   <div className="floral-divider" style={getFrontParallaxStyle(1.5)}></div>
                 </div>
                 
@@ -204,18 +194,15 @@ export function HeroSection() {
                 
                 <div className="decorative-elements">
                   <div className="floral-elements" style={getFrontParallaxStyle(1.8)}>
-                    <span>🌿</span>
-                    <span>🌿</span>
-                    <span>🌿</span>
+                   
                   </div>
                 </div>
               </div>
               
               <div className="card-footer">
-                <p className="wedding-date" style={getFrontParallaxStyle(0.5)}>
-                  {dogTexts ? 
-                    dogTexts.quote : 
-                    '"Hay personas por las que vale la pena derretirse". Frozen (2013)'
+                <p className="birthday-date" style={getFrontParallaxStyle(0.5)}>
+                  {
+                    'No cumples 40, eres de 20 con 20 años de experiencia'
                   }
                 </p>
                 <div className="elegant-flourish" style={getFrontParallaxStyle(1.4)}></div>
@@ -255,8 +242,8 @@ export function HeroSection() {
               
               <div className="photo-container">
                 <img
-                  src="./assets/photo-1.jpeg"
-                  alt="Foto de la pareja"
+                  src="./assets/photo-1.jpg"
+                  alt="foto de javi"
                   className="couple-photo"
                   style={{ 
                     ...getPhotoParallaxStyle()

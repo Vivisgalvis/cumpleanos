@@ -73,7 +73,7 @@
   }
 
   /* Invitación principal */
-  .wedding-card {
+  .birthday-card {
     width: 350px;
     height: 500px;
     position: relative;
@@ -200,21 +200,22 @@
     margin-bottom: 20px;
   }
 
-  .wedding-ornament {
+  .birthday-ornament {
     height: 40px;
     margin: 0 auto 15px;
     width: 120px;
+    padding: 17%;
     background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Cpath d='M10 20 Q20 10, 30 20 Q40 30, 50 20 Q60 10, 70 20 Q80 30, 90 20 Q100 10, 110 20' stroke='%23a7c957' stroke-width='2' fill='none'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23d4e09b'/%3E%3Ccircle cx='60' cy='20' r='3' fill='%23d4e09b'/%3E%3Ccircle cx='100' cy='20' r='3' fill='%23d4e09b'/%3E%3C/svg%3E");
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdomXKAi6xYcUctq82YLRU8pXR1BuKumVxZA&s");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
 
-  .wedding-title {
+  .birthday-title {
     font-size: 16px;
     font-weight: 300;
-    color: #6b8e23;
+    color: #00008B;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Times New Roman', serif;
@@ -237,30 +238,30 @@
     height: 1px;
     background: linear-gradient(to right, 
       transparent, 
-      rgba(167, 201, 87, 0.4) 20%, 
-      rgba(167, 201, 87, 0.8) 50%, 
-      rgba(167, 201, 87, 0.4) 80%, 
+      rgba(70, 130, 180, 0.4) 20%, 
+      rgba(70, 130, 180, 0.8) 50%, 
+      rgba(70, 130, 180, 0.4) 80%, 
       transparent);
     margin: 15px auto;
     position: relative;
   }
 
   .floral-divider::before {
-    content: '✿';
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    color: #a7c957;
-    padding: 0 8px;
-    font-size: 12px;
+    width: 50px;
+    height: 50px;
+    background: url('/public/assets/millonarios.jpg') no-repeat center center;
+    background-size: contain;
   }
 
   .guest-name {
     font-size: 28px;
     font-weight: 400;
-    color: #2d5016;
+    color: #0000FF;
     margin: 20px 0;
     padding: 0;
     font-family: 'Times New Roman', serif;
@@ -278,7 +279,7 @@
   .main-message {
     font-size: 22px;
     font-weight: 300;
-    color: #556b2f;
+    color: #0000FF;
     margin-bottom: 10px;
     font-family: 'Times New Roman', serif;
     text-shadow: none;
@@ -286,7 +287,7 @@
 
   .sub-message {
     font-size: 16px;
-    color: #6b8e23;
+    color: #00008B;
     font-style: italic;
     font-family: 'Times New Roman', serif;
     font-weight: 300;
@@ -336,9 +337,9 @@
     text-align: center;
   }
 
-  .wedding-date {
+  .birthday-date {
     font-size: 14px;
-    color: #6b8e23;
+    color: #00008B;
     font-family: 'Times New Roman', serif;
     font-style: italic;
     margin-bottom: 10px;
@@ -349,7 +350,7 @@
     height: 20px;
     margin: 0 auto;
     background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 20'%3E%3Cpath d='M5 10 Q15 5, 25 10 Q35 15, 45 10 Q50 8, 55 10' stroke='%23a7c957' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='30' cy='10' r='2' fill='%23d4e09b'/%3E%3C/svg%3E");
+      url("data:image/jpeg;base64,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");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -472,319 +473,11 @@
     z-index: 15;
   }
 
-  /* Hojas decorativas más elaboradas */
-  .corner-leaves .leaf {
-    position: absolute;
-    width: 25px;
-    height: 35px;
-    opacity: 0.7;
-    animation: gentle-sway 4s ease-in-out infinite;
-  }
-
-  .corner-leaves .leaf::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #6b8e23 0%, #a7c957 30%, #d4e09b 70%, #9cb834 100%);
-    border-radius: 0 100% 0 100%;
-    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
-  }
-
-  .corner-leaves .leaf::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #6b8e23, transparent);
-    transform: translateY(-50%);
-  }
-
-  .leaf-top-left {
-    top: 8px;
-    left: 8px;
-    transform: rotate(-30deg);
-    animation-delay: 0s;
-  }
-
-  .leaf-top-right {
-    top: 8px;
-    right: 8px;
-    transform: rotate(30deg);
-    animation-delay: 1s;
-  }
-
-  .leaf-bottom-left {
-    bottom: 8px;
-    left: 8px;
-    transform: rotate(-150deg);
-    animation-delay: 2s;
-  }
-
-  .leaf-bottom-right {
-    bottom: 8px;
-    right: 8px;
-    transform: rotate(150deg);
-    animation-delay: 3s;
-  }
-
-  /* Ramas decorativas en los bordes */
-  .border-ornaments .ornament {
-    position: absolute;
-    opacity: 0.6;
-    animation: gentle-grow 6s ease-in-out infinite;
-  }
-
-  .ornament-top {
-    top: 3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 12px;
-    animation-delay: 0s;
-  }
-
-  .ornament-top::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #6b8e23, #a7c957, #6b8e23, transparent);
-    transform: translateY(-50%);
-    border-radius: 2px;
-  }
-
-  .ornament-top::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(ellipse 60% 80%, #a7c957, #6b8e23);
-    border-radius: 0 100% 0 80%;
-    transform: rotate(15deg);
-    box-shadow: 25px 0 0 -2px #a7c957, 35px 2px 0 -3px #6b8e23;
-  }
-
-  .ornament-bottom {
-    bottom: 3px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-    width: 50px;
-    height: 12px;
-    animation-delay: 3s;
-  }
-
-  .ornament-bottom::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #6b8e23, #a7c957, #6b8e23, transparent);
-    transform: translateY(-50%);
-    border-radius: 2px;
-  }
-
-  .ornament-bottom::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(ellipse 60% 80%, #a7c957, #6b8e23);
-    border-radius: 0 100% 0 80%;
-    transform: rotate(15deg);
-    box-shadow: 25px 0 0 -2px #a7c957, 35px 2px 0 -3px #6b8e23;
-  }
-
-  .ornament-left {
-    left: 3px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-    width: 50px;
-    height: 12px;
-    animation-delay: 1.5s;
-  }
-
-  .ornament-left::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #6b8e23, #a7c957, #6b8e23, transparent);
-    transform: translateY(-50%);
-    border-radius: 2px;
-  }
-
-  .ornament-left::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(ellipse 60% 80%, #a7c957, #6b8e23);
-    border-radius: 0 100% 0 80%;
-    transform: rotate(15deg);
-    box-shadow: 25px 0 0 -2px #a7c957, 35px 2px 0 -3px #6b8e23;
-  }
-
-  .ornament-right {
-    right: 3px;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    width: 50px;
-    height: 12px;
-    animation-delay: 4.5s;
-  }
-
-  .ornament-right::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #6b8e23, #a7c957, #6b8e23, transparent);
-    transform: translateY(-50%);
-    border-radius: 2px;
-  }
-
-  .ornament-right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(ellipse 60% 80%, #a7c957, #6b8e23);
-    border-radius: 0 100% 0 80%;
-    transform: rotate(15deg);
-    box-shadow: 25px 0 0 -2px #a7c957, 35px 2px 0 -3px #6b8e23;
-  }
-
-  /* Pequeñas flores decorativas */
-  .floating-details .detail {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    opacity: 0.6;
-    animation: gentle-bloom 4s ease-in-out infinite;
-  }
-
-  .detail::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    background: radial-gradient(circle, #d4e09b, #a7c957);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .detail::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background: 
-      radial-gradient(ellipse 40% 80% at 20% 50%, #a7c957, transparent),
-      radial-gradient(ellipse 40% 80% at 80% 50%, #a7c957, transparent),
-      radial-gradient(ellipse 80% 40% at 50% 20%, #a7c957, transparent),
-      radial-gradient(ellipse 80% 40% at 50% 80%, #a7c957, transparent);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.8;
-  }
-
-  .detail-1 {
-    top: 18%;
-    left: 12%;
-    animation-delay: 0s;
-  }
-
-  .detail-2 {
-    top: 28%;
-    right: 18%;
-    animation-delay: 1s;
-  }
-
-  .detail-3 {
-    bottom: 32%;
-    left: 15%;
-    animation-delay: 2s;
-  }
-
-  .detail-4 {
-    bottom: 22%;
-    right: 12%;
-    animation-delay: 1.5s;
-  }
-
-  /* Animaciones para elementos decorativos */
-  @keyframes gentle-float {
-    0%, 100% { 
-      transform: translateY(0px) scale(1); 
-      opacity: 0.5; 
-    }
-    50% { 
-      transform: translateY(-3px) scale(1.05); 
-      opacity: 0.8; 
-    }
-  }
-
-  @keyframes gentle-pulse {
-    0%, 100% { 
-      transform: scale(1); 
-      opacity: 0.4; 
-    }
-    50% { 
-      transform: scale(1.2); 
-      opacity: 0.7; 
-    }
-  }
-
-  @keyframes gentle-grow {
-    0%, 100% { 
-      transform: scaleX(1); 
-      opacity: 0.6; 
-    }
-    50% { 
-      transform: scaleX(1.1); 
-      opacity: 0.8; 
-    }
-  }
-
-  @keyframes gentle-bloom {
-    0%, 100% { 
-      transform: scale(1) rotate(0deg); 
-      opacity: 0.6; 
-    }
-    50% { 
-      transform: scale(1.15) rotate(5deg); 
-      opacity: 0.9; 
-    }
-  }
-
 
 
   /* Responsive para móviles */
   @media (max-width: 480px) {
-    .wedding-card {
+    .birthday-card {
       width: 300px;
       height: 420px;
     }
@@ -805,7 +498,7 @@
       font-size: 18px;
     }
 
-    .wedding-title {
+    .birthday-title {
       font-size: 14px;
     }
 
@@ -882,7 +575,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #2d5016;
+    color: #0000FF;
     opacity: 0;
     pointer-events: auto;
     cursor: pointer;
@@ -898,7 +591,7 @@
     padding: 8px 12px;
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(167, 201, 87, 0.35);
+    border: 1px solid rgba(0, 102, 204, 0.35);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
     text-shadow: none;
   }
