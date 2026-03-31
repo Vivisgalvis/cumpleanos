@@ -99,7 +99,7 @@ export function LocationSection() {
                 className="inline-flex items-center gap-2 rounded-lg border border-[#00008B]/20 px-3.5 py-2 text-[#00008B] text-sm bg-white hover:bg-[#f1f6ea] transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`https://waze.com/ul?ll=4.9831223487854,-73.99113464355469&navigate=yes`}
+                href={`https://waze.com/ul/hd2dzstcep`}
               >
                 { 'Abrir en Waze'}
               </a>
